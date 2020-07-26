@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Berkshire+Swash&family=Josefin+Sans&family=Montserrat+Subrayada:wght@700&family=Notable&family=Piedra&display=swap');
+
+*{
+	list-style: none;
+	text-decoration: none;
+}
+
+.container {
+	width: 100; 
+	margin: 2px 2px 2px 2px;
+}
+
+#concert-head{
+	position: absolute;
+	top: 30%; 
+	left: 25%; 
+	font-size: 8vw;
+	font-family: 'Allura';
+	color: #fb2274;
+	border-bottom: 2px dotted;
+	font-weight: bold;
+}
+
+#concert-date{
+	position: absolute;
+	top: 55%; 
+	left: 38%; 
+	font-size: 2vw;
+	font-family: 'Notable';
+	background-color: white;
+	color: #fb2274;
+	border: 2px solid;
+	font-weight: bold;
+}
+
+.navbar {
+	justify-content: center;
+	position: relative;
+	background-color: black; 
+}
+
+.navbar ul{
+	display: flex;	
+}
+
+.navbar ul li{
+	margin: 10px 10px 10px 10px;	
+}
+
+.navbar ul li a{
+	color: white;
+	font-weight: bold;
+	font-size: 2vw;
+}
+
+.navbar ul li a:hover{
+	color: #fb2274;
+	cursor: pointer;
+}
+
+
+.form-group{
+	font-size: 1.5vw;
+}
+
+#registerBlock{
+	position: relative;
+	border: 2px solid;
+	display: block;
+	justify-content: center;
+	margin: 2% 30% 3% 30%;
+	padding: 20px;
+	box-sizing: 10vw;
+	display: none;
+}
+
+#registerBlock .form-group{
+	padding: 10px;
+	background: transparent;
+}
+
+#showListBlock{
+	display: none;
+}
+
+#registerBlock button{
+  border:1px solid gray;
+  border-radius:7%;
+  font-size:0.875;
+  word-wrap: break-word;
+  width: 100px; 
+  max-width: 60%;
+  margin-left: 33%;
+}
+
+#showListBlock table{
+	justify-content: center;
+	margin-left:auto; 
+    margin-right:auto;
+    margin-top: 3%
+} 
+
+#registrantList {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+  font-size: 1.5vw;
+  justify-content: center;
+}
+
+#registrantList td, #registrantList th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#registrantList tr:nth-child(even)
+{
+	background-color: #f2f2f2;
+}
+
+#registrantList th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #4CAF50;
+  color: white;
+}
