@@ -95,11 +95,11 @@ function addRows(){
         }
       }
     else //if each condition is satisfied then insert row to table
-      insertRow();
+      insertRowFun();
 }
 
 
-function insertRow()
+function insertRowFun()
 {
     //get user entered data
     var fName = document.getElementById('FirstName').value;
