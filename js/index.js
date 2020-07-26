@@ -56,6 +56,38 @@ function addRows(){
 
     var table = document.getElementById("registrantList");  //access the table
     
+    if(emailArr.length>0)    
+      {
+        for(var i=0; i<emailArr.length; i++)  //condition to check whether email is registered or not.
+        {
+          if(emailArr[i] == email)
+          {
+            alert('User Already Registered...!!!');
+            document.getElementById('FirstName').value = '';
+            document.getElementById('LastName').value = '';
+            document.getElementById('exampleInputEmail1').value = '';
+            document.getElementById('mobileNumber').value = '';
+            emailFlag = 0;
+          }
+        }
+      }
+
+      if(numberArr.length>0)    
+      {
+        for(var i=0; i<numberArr.length; i++)  //condition to check whether email is registered or not.
+        {
+          if(numberArr[i] == number)
+          {
+            alert('User Already Registered...!!!');
+            document.getElementById('FirstName').value = '';
+            document.getElementById('LastName').value = '';
+            document.getElementById('exampleInputEmail1').value = '';
+            document.getElementById('mobileNumber').value = '';
+            emailFlag = 0;
+          }
+        }
+      }
+
     if(fName.length<3)  //condition to check whether first name is greater than 3 characters.
       alert("Enter Valid First Name...!!!");
     else if (lName.length<3) //condition to check whether last name is greater than 3 characters.
@@ -70,37 +102,16 @@ function addRows(){
     {
       alert("Enter Valid Email...!!!");
     }
-    else if(emailArr.length>0)    
-      {
-        for(var i=0; i<emailArr.length; i++)  //condition to check whether email is registered or not.
-        {
-          if(emailArr[i] == email)
-          {
-            alert('User Already Registered...!!!');
-            document.getElementById('FirstName').value = '';
-            document.getElementById('LastName').value = '';
-            document.getElementById('exampleInputEmail1').value = '';
-            document.getElementById('mobileNumber').value = '';
-            emailFlag = 0;
-          }
-          if (numberArr[i] == number) //condition to check whether mobile number is registered or not.
-          {
-            alert('User Already Registered...!!!');
-            document.getElementById('FirstName').value = '';
-            document.getElementById('LastName').value = '';
-            document.getElementById('exampleInputEmail1').value = '';
-            document.getElementById('mobileNumber').value = '';
-            emailFlag = 0;
-          }
-        }
-      }
-    else //if each condition is satisfied then insert row to table
+    else if (emailFlag == 1) {
       insertRowFun();
+    } //if each condition is satisfied then insert row to table
+      
 }
 
 
 function insertRowFun()
 {
+
     //get user entered data
     var fName = document.getElementById('FirstName').value;
     var lName = document.getElementById('LastName').value;
@@ -134,7 +145,7 @@ function insertRowFun()
       document.getElementById('LastName').value = '';
       document.getElementById('exampleInputEmail1').value = '';
       document.getElementById('mobileNumber').value = '';
-}
+  }
 }
 
 
