@@ -5,6 +5,9 @@ document.querySelector('#LastName').addEventListener('keypress',getData);
 document.querySelector('#exampleInputEmail1').addEventListener('keypress',getData);
 document.querySelector('#exampleInputEmail1').addEventListener('keypress',ValidateEmail);
 document.querySelector('#mobileNumber').addEventListener('keypress',getData);
+document.querySelector("#register").addEventListener('click',addBackground);
+document.querySelector("#showList").addEventListener('click',addBackground);
+document.querySelector("#aboutUs").addEventListener('click',addBackground);
 
 //create array for email and mobile number
 let emailArr = [];
@@ -12,30 +15,44 @@ let numberArr = [];
 let x = 0;  //initialize counter variable for array
 let flag = 0; //initialize flag variable
 let emailFlag = 1; 
+
+function addBackground(){
+  document.body.style.background = "gray";
+}
+
 //function to display respecitve pages
 function disp(e) {
     var sec1=document.getElementById("home_page");
     var sec2=document.getElementById("registerBlock");
     var sec3=document.getElementById("showListBlock");
+    var sec4=document.getElementById("aboutDiv");
     console.log(e);
       if (e=='home') 
       {
         sec1.style.display="block";
         sec2.style.display="none";  
         sec3.style.display="none";
+        sec4.style.display="none";
       }
       else if(e == 'register')
       {
           sec2.style.display="block";
           sec1.style.display="none";  
           sec3.style.display="none";
+          sec4.style.display="none";
       }
-      else
+      else if (e == 'aboutUs')
       {
+        sec4.style.display="block";
+          sec1.style.display="none";
+          sec3.style.display="none";  
+          sec2.style.display="none";
+          }
+      else{
           sec3.style.display="block";
           sec1.style.display="none";  
           sec2.style.display="none";
-        
+          sec4.style.display="none";
       }
 }
 
