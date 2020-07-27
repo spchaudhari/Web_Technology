@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="css/style.css">
-
     <title>Music Concert 2020</title>
   </head>
 
@@ -17,6 +16,7 @@
 <div class="navbar">
 	<ul>
 		<li><a id="home" onclick="disp(this.id)">Home</a></li>
+		<li><a id="aboutUs" onclick="disp(this.id)">About Us</a></li>
 		<li><a id="register" onclick="disp(this.id)">Registration</a></li>
 		<li><a id="showList" onclick="disp(this.id)">Show Registrations</a></li>
 	</ul>
@@ -62,6 +62,34 @@
 </div>
 </div>
 
+      <div class="wrap1" id="aboutDiv">
+        <h2>About Event</h2>
+        <p>
+          <br>
+          Music Concert 2020
+          <br>
+    <br>
+    A very unique concept in a tribute to Mohd Rafi Saheb on his 40th Death Anniversary where classically trained and versatile playback singers present Md Rafi’s raagas based songs in a completely different style.
+    <br>
+    <h2>Singers</h2>
+    <br>
+    <p id="Singers">
+    Arijit Singh <br> 
+    & <br> 
+    Atif Aslam
+	</p>
+	<br>
+	<p>
+    	<h2>Event Details</h2>
+    <br>
+	Venue - Veermata Jijabai Technological Institute (VJTI) Cricket Ground<br><br>	
+   	Date - 15th August 2020<br><br>
+	Time - 7 PM onwards	
+	</p>
+    <br>
+    
+    </div>
+
     <div class="section" id="registerBlock">
 	<form>
 		<div class="form-group">
@@ -77,8 +105,8 @@
   		<div class="form-group">
     		<label for="exampleInputEmail1">Email address</label>
     		<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    		<span id="lblError" style="color: red"></span>
-    		<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    		<span id="lblError" style="color: red"></span><br>
+    		<small style="color: black;">We'll never share your email with anyone else.</small>
   		</div>
 
   		<div class="form-group">
@@ -86,7 +114,9 @@
   			<input type="text" class="form-control" id="mobileNumber" maxlength="10" onkeypress='validate(event);'>
   		</div>
 
-  		<button type="button" id="register-btn">Submit</button>
+  		<div class="form-group">
+  			<button type="button" id="register-btn">Submit</button>
+  		</div>
 	</form>
 	</div>
 
